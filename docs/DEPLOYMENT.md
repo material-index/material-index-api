@@ -41,8 +41,8 @@ This guide covers the deployment strategy for the Material Index API Gateway, in
 ```bash
 # .env
 VITE_API_URL=https://api.material-index.com/v1
-VITE_SUPABASE_URL=https://likqvubiqoooqxrhvlsn.supabase.co
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxpa3F2dWJpcW9vb3F4cmh2bHNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTExOTk5NzAsImV4cCI6MjA2Njc3NTk3MH0.c4TCXE3PDE7E5f1G9JH6vHSDkEzjU7VtsCjX8aqp_Z8
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
 VITE_APP_ENV=production
 ```
 
@@ -53,9 +53,9 @@ NODE_ENV=production
 PORT=8000
 
 # Supabase
-SUPABASE_URL=https://likqvubiqoooqxrhvlsn.supabase.co
-SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxpa3F2dWJpcW9vb3F4cmh2bHNuIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTE5OTk3MCwiZXhwIjoyMDY2Nzc1OTcwfQ.gqzd_W-KTX0y2pCcH4C5hRANM_OBT5zKp2qhRSKTDdY
-SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxpa3F2dWJpcW9vb3F4cmh2bHNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTExOTk5NzAsImV4cCI6MjA2Njc3NTk3MH0.c4TCXE3PDE7E5f1G9JH6vHSDkEzjU7VtsCjX8aqp_Z8
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key_here
+SUPABASE_ANON_KEY=your_supabase_anon_key_here
 
 # Redis
 REDIS_URL=redis://your-redis-url:6379
