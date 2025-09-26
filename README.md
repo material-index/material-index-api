@@ -1,249 +1,199 @@
-# Material Index API Gateway
+# Material Index API - Documentation & SDKs
 
-A comprehensive API platform that exposes a Supabase material database through a modern, developer-friendly interface. Inspired by Redoc, it provides interactive documentation, SDKs, and a pay-as-you-go billing system.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![API Version](https://img.shields.io/badge/API%20Version-1.0.0-blue.svg)](https://api.material-index.com/v1)
+[![Documentation](https://img.shields.io/badge/Documentation-OpenAPI%203.0-green.svg)](./docs/)
+
+## 🌟 Overview
+
+The **Material Index API** provides comprehensive access to material property data, enabling developers to build applications that require material information for engineering, design, and research purposes.
+
+This repository contains:
+- 📚 **Complete API Documentation**
+- 🛠️ **SDKs for Multiple Languages**
+- 📖 **Usage Examples and Guides**
+- 🔧 **Developer Tools and Resources**
 
 ## 🚀 Quick Start
 
-### 📖 For Developers
-1. **New to the project?** Start with [Architecture](./docs/ARCHITECTURE.md) to understand the system
-2. **Ready to code?** Follow [API Implementation](./docs/API_ENDPOINTS_IMPLEMENTATION.md) for backend development
-3. **Security concerns?** Review [Security](./docs/SECURITY.md) for comprehensive security measures
-4. **Deployment ready?** Check [Deployment](./docs/DEPLOYMENT.md) for production setup
-
-### 🛠️ For Contributors
-- **Project Status**: See [Project Status](./docs/PROJECT_STATUS.md) for current milestones
-- **Implementation Plan**: Follow [Implementation Plan](./docs/IMPLEMENTATION_PLAN.md) for development phases
-- **API Reference**: Use [API Specification](./docs/API_SPECIFICATION.md) for endpoint details
-
-### Prerequisites
-- Node.js 18+
-- npm or yarn
-- Supabase account
-- Redis (for production)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd material-index-api
-   ```
-
-2. **Install dependencies**
-   ```bash
-   # Frontend
-   cd frontend
-   npm install
-   
-   # Backend
-   cd ../backend
-   npm install
-   ```
-
-3. **Environment Setup**
-   ```bash
-   # Copy environment file
-   cp .env.example .env
-   
-   # Edit .env with your Supabase credentials
-   nano .env
-   ```
-
-4. **Start Development Servers**
-   ```bash
-   # Terminal 1 - Backend
-   cd backend
-   npm run dev
-   
-   # Terminal 2 - Frontend
-   cd frontend
-   npm run dev
-   ```
-
-5. **Access the Application**
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8000
-   - API Documentation: http://localhost:3000/docs
-
-## 📁 Project Structure
-
-```
-material-index-api/
-├── frontend/                 # Vite + React frontend
-│   ├── src/
-│   │   ├── components/      # React components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── lib/            # Utility functions
-│   │   └── types/          # TypeScript types
-│   ├── package.json
-│   └── vite.config.ts
-├── backend/                 # Express.js API gateway
-│   ├── src/
-│   │   ├── controllers/    # Route controllers
-│   │   ├── services/       # Business logic
-│   │   ├── middleware/     # Express middleware
-│   │   ├── routes/         # API routes
-│   │   ├── types/          # TypeScript types
-│   │   └── utils/          # Utility functions
-│   ├── package.json
-│   └── tsconfig.json
-├── python-sdk/             # Python SDK (future)
-├── typescript-sdk/         # TypeScript SDK (future)
-├── docs/                   # Documentation
-├── .env                    # Environment variables
-└── README.md
-```
-
-## 🔧 Development
-
-### Frontend Development
+### API Access
 ```bash
-cd frontend
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run lint         # Run ESLint
+# Base URL
+https://api.material-index.com/v1
+
+# Health Check
+curl https://api.material-index.com/v1/health
+
+# Get Materials
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     https://api.material-index.com/v1/materials
 ```
 
-### Backend Development
+### SDK Installation
+
+#### TypeScript/JavaScript
 ```bash
-cd backend
-npm run dev          # Start development server with nodemon
-npm run build        # Build TypeScript
-npm start            # Start production server
-npm test             # Run tests
-npm run lint         # Run ESLint
+npm install @material-index/api-client
+```
+
+#### Python
+```bash
+pip install material-index-api
 ```
 
 ## 📚 Documentation
 
-### 🏗️ Architecture & Design
-- [**Architecture**](./docs/ARCHITECTURE.md) - System design, components, and data flow
-- [**Tech Stack**](./docs/TECH_STACK.md) - Technology choices, rationale, and setup
-- [**Database Schema**](./docs/DATABASE_SCHEMA.md) - Supabase database structure and relationships
+### API Reference
+- **[OpenAPI Specification](./docs/openapi.yaml)** - Complete API reference
+- **[API Endpoints](./docs/API_ENDPOINTS_IMPLEMENTATION.md)** - Detailed endpoint documentation
+- **[Authentication](./docs/SECURITY.md)** - API key and JWT authentication
+- **[Rate Limiting](./docs/SECURITY.md#rate-limiting)** - Usage limits and quotas
 
-### 🔌 API Development
-- [**API Specification**](./docs/API_SPECIFICATION.md) - Complete API endpoint documentation
-- [**API Implementation**](./docs/API_ENDPOINTS_IMPLEMENTATION.md) - Detailed implementation guide for backend development
-- [**SDK Design**](./docs/SDK_DESIGN.md) - TypeScript and Python SDK architecture
+### Developer Guides
+- **[Getting Started](./docs/API_SPECIFICATION.md)** - Quick start guide
+- **[SDK Documentation](./docs/SDK_DESIGN.md)** - SDK usage examples
+- **[Architecture](./docs/ARCHITECTURE.md)** - System architecture overview
+- **[Database Schema](./docs/DATABASE_SCHEMA.md)** - Data structure reference
 
-### 🛡️ Security & Deployment
-- [**Security**](./docs/SECURITY.md) - Comprehensive security measures, OAuth 2.0, MFA, and best practices
-- [**Deployment**](./docs/DEPLOYMENT.md) - Production deployment and infrastructure setup
+## 🛠️ SDKs
 
-### 📋 Project Management
-- [**Project Status**](./docs/PROJECT_STATUS.md) - Current development status, milestones, and roadmap
-- [**Implementation Plan**](./docs/IMPLEMENTATION_PLAN.md) - Step-by-step development phases
+### TypeScript/JavaScript SDK
+```typescript
+import { MaterialIndexAPI } from '@material-index/api-client';
+
+const api = new MaterialIndexAPI({
+  apiKey: 'your-api-key',
+  baseURL: 'https://api.material-index.com/v1'
+});
+
+// Get materials
+const materials = await api.materials.list({
+  page: 1,
+  limit: 20,
+  search: 'copper'
+});
+```
+
+### Python SDK
+```python
+from material_index import MaterialIndexAPI
+
+api = MaterialIndexAPI(api_key='your-api-key')
+
+# Get materials
+materials = api.materials.list(
+    page=1,
+    limit=20,
+    search='copper'
+)
+```
+
+## 📖 Examples
+
+Check out our [examples directory](./examples/) for:
+- **Basic API Usage** - Simple requests and responses
+- **Advanced Search** - Complex filtering and pagination
+- **SDK Integration** - Language-specific examples
+- **Real-world Applications** - Complete use cases
+
+## 🔧 Developer Tools
+
+### API Testing
+- **Postman Collection** - Import our collection for easy testing
+- **Insomnia Workspace** - Ready-to-use API workspace
+- **cURL Examples** - Command-line examples for all endpoints
+
+### Code Generation
+- **OpenAPI Generator** - Generate SDKs for any language
+- **Type Definitions** - TypeScript interfaces and types
+- **Schema Validation** - JSON Schema for request/response validation
 
 ## 🌐 API Endpoints
 
-### Base URL
-- Development: `http://localhost:8000/api/v1`
-- Production: `https://api.material-index.com/v1`
+### Core Resources
+- **Materials** - Material data and properties
+- **Categories** - Material classification system
+- **Properties** - Material property definitions
+- **Search** - Advanced search and filtering
 
-### Main Endpoints
-- `GET /materials` - List materials with pagination and filtering
-- `GET /materials/{id}` - Get specific material
-- `GET /materials/search` - Search materials
-- `GET /categories` - List material categories
-- `GET /properties` - List material properties
+### System
+- **Health Check** - API status and version
+- **Rate Limits** - Usage monitoring and limits
 
-## 🔑 Authentication
+## 🔐 Authentication
 
-All API requests require an API key in the Authorization header:
-
+### API Key Authentication
 ```bash
-Authorization: Bearer YOUR_API_KEY
+curl -H "Authorization: Bearer YOUR_API_KEY" \
+     https://api.material-index.com/v1/materials
 ```
 
-## 📊 Rate Limiting
+### Supabase JWT (Advanced)
+```bash
+curl -H "Authorization: Bearer SUPABASE_JWT_TOKEN" \
+     https://api.material-index.com/v1/materials
+```
 
-- **Free Tier**: 1,000 requests/hour
-- **Pro Tier**: 10,000 requests/hour
-- **Enterprise**: Custom limits
+## 📊 Rate Limits
+
+| Plan | Requests/Minute | Requests/Day | Burst Limit |
+|------|-----------------|---------------|-------------|
+| Free | 60 | 1,000 | 100 |
+| Pro | 300 | 10,000 | 500 |
+| Enterprise | 1,000 | 100,000 | 2,000 |
 
 ## 🚀 Deployment
 
-### SSH Server Deployment
-```bash
-# Build frontend
-cd frontend
-npm run build
+The Material Index API is designed to run independently on any hosting platform:
 
-# Build backend
-cd ../backend
-npm run build
+### One.com Webspace
+- **Frontend**: Static files (HTML, CSS, JS)
+- **Backend**: Node.js API server
+- **Database**: Supabase cloud database
+- **No GitHub dependency** required for deployment
 
-# Deploy to SSH server
-rsync -avz --delete frontend/dist/ user@ssh.material-index.com:/api/
-rsync -avz --delete backend/dist/ user@ssh.material-index.com:/api/backend/
-
-# Restart services
-ssh user@ssh.material-index.com
-cd /api/backend
-pm2 restart material-index-api
-```
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **Vite** - Build tool and dev server
-- **React 18** - UI framework
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Radix UI** - Component library
-- **React Query** - Data fetching
-- **React Router** - Routing
-
-### Backend
-- **Express.js** - Web framework
-- **TypeScript** - Type safety
-- **Supabase** - Database and auth
-- **Redis** - Caching and rate limiting
-- **Joi** - Validation
-- **Winston** - Logging
-
-## 📈 Features
-
-### 🔧 Core Features
-- ✅ **Interactive Documentation** - Redoc-inspired API docs
-- ✅ **Multi-language SDKs** - TypeScript and Python
-- ✅ **Real-time Updates** - WebSocket support
-- ✅ **Developer Dashboard** - Usage analytics
-- ✅ **Search & Filtering** - Advanced query capabilities
-- ✅ **Pagination** - Efficient data loading
-- ✅ **Caching** - Redis-based performance optimization
-
-### 🛡️ Enhanced Security
-- ✅ **OAuth 2.0 & OpenID Connect** - Modern authentication standards
-- ✅ **Multi-Factor Authentication (MFA)** - TOTP with backup codes
-- ✅ **Advanced Rate Limiting** - Adaptive throttling and DDoS protection
-- ✅ **Comprehensive Input Validation** - SQL injection prevention
-- ✅ **Security Auditing** - Automated vulnerability scanning and fuzz testing
-- ✅ **Dependency Management** - Automated security updates
-- ✅ **Security Headers** - CSP, XSS protection, and more
+### Self-Hosted
+- **Docker**: Containerized deployment
+- **Kubernetes**: Scalable orchestration
+- **Traditional**: Direct server deployment
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
+
+### Development Setup
+```bash
+# Clone the repository
+git clone https://github.com/material-index/material-index-api.git
+
+# Install dependencies
+npm install
+
+# Run documentation server
+npm run docs:serve
+
+# Run tests
+npm test
+```
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-## 📞 Support
+## 🆘 Support
 
-- Documentation: [docs/](./docs/)
-- Issues: [GitHub Issues](https://github.com/material-index/api/issues)
-- Email: support@material-index.com
+- **Documentation**: [docs.material-index.com](https://docs.material-index.com)
+- **API Status**: [status.material-index.com](https://status.material-index.com)
+- **Community**: [GitHub Discussions](https://github.com/material-index/material-index-api/discussions)
+- **Email**: [info@material-index.com](mailto:info@material-index.com)
+
+## 🔗 Links
+
+- **Website**: [material-index.com](https://material-index.com)
+- **API Portal**: [api.material-index.com](https://api.material-index.com)
+- **Documentation**: [docs.material-index.com](https://docs.material-index.com)
+- **Status Page**: [status.material-index.com](https://status.material-index.com)
 
 ---
 
-**Built with ❤️ by the Material Index Team**
-
-
+**Material Index API** - Empowering developers with comprehensive material data 🚀
