@@ -109,3 +109,6 @@ Thumbs.db
 
 # Vite
 .vite/
+
+# Documentation (excluded from repository)
+docs/
