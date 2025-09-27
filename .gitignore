@@ -2,12 +2,20 @@
 node_modules/
 */node_modules/
 
-# Environment variables
+# Environment variables and secrets
 .env
+.env.*
+*.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.production
+.env.staging
+.env.development
+.env.production.example
+.env.example
+.env.template
 
 # Build outputs
 dist/
@@ -118,3 +126,54 @@ demo-app/
 api-gateway/
 examples/
 scripts/
+
+# Security and secrets
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+secrets/
+credentials/
+config/secrets/
+*.secret
+*.private
+*.conf
+*.config
+*.ini
+*.properties
+*.yaml
+*.yml
+!package.json
+!package-lock.json
+!tsconfig.json
+!vite.config.ts
+!tailwind.config.js
+!postcss.config.js
+
+# JWT and tokens
+*.jwt
+*.token
+jwt/
+tokens/
+
+# API keys and credentials
+api-keys/
+credentials/
+auth/
+authentication/
+
+# Database credentials
+database/
+db/
+*.db
+*.sqlite
+*.sqlite3
+
+# Coveralls and CI secrets
+.coveralls.yml
+.coveralls.yaml
+coverage/
+*.lcov
