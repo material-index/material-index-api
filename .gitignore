@@ -112,3 +112,9 @@ Thumbs.db
 
 # Documentation (excluded from repository)
 docs/
+
+# Application code (excluded from repository)
+demo-app/
+api-gateway/
+examples/
+scripts/
