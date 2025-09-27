@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ChevronDown, ChevronRight, BookOpen, Database, Settings, Code, FileText } from 'lucide-react'
+import { ChevronDown, ChevronRight, BookOpen, Database, Code, FileText } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 

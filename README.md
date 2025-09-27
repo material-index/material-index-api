@@ -29,6 +29,13 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
      https://api.material-index.com/v1/materials
 ```
 
+### Production Builds
+The repository includes production-ready builds for deployment:
+
+- **Frontend**: `demo-app/dist/` - Optimized React application
+- **Backend**: `api-gateway/dist/` - Compiled Node.js API server
+- **Documentation**: Complete deployment guides and examples
+
 ### SDK Installation
 
 #### TypeScript/JavaScript
