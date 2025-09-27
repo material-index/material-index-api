@@ -177,3 +177,4 @@ db/
 .coveralls.yaml
 coverage/
 *.lcov
+SECURITY.md
