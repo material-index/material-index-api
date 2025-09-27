@@ -8,7 +8,7 @@ setup(
     version="1.0.0",
     author="Material Index Team",
     author_email="info@material-index.com",
-    description="Python SDK for Material Index API",
+    description="Python SDK for Material Index API Gateway",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/material-index/material-index-api",

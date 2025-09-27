@@ -1,7 +1,7 @@
 {
   "name": "@material-index/api-client",
   "version": "1.0.0",
-  "description": "TypeScript/JavaScript SDK for Material Index API",
+  "description": "TypeScript/JavaScript SDK for Material Index API Gateway",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

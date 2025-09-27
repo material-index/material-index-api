@@ -16,15 +16,14 @@ This repository contains:
 
 ## 🚀 Quick Start
 
-### Database Access
+### API Gateway Access
 ```bash
-# Supabase Database URL
-https://likqvubiqoooqxrhvlsn.supabase.co
+# Material Index API Gateway
+https://api.material-index.com/v1
 
-# Database Connection
-Host: db.likqvubiqoooqxrhvlsn.supabase.co
-Port: 5432
-Database: postgres
+# Database Schema Access
+# Access material data through the API gateway
+# No direct database access required
 ```
 
 ### SDK Installation
@@ -72,21 +71,21 @@ Properties ←→ Property Categories (Many-to-One)
 
 ### TypeScript/JavaScript SDK
 ```typescript
-import { MaterialIndexDatabase } from '@material-index/database-client';
+import { MaterialIndexAPI } from '@material-index/api-client';
 
-const db = new MaterialIndexDatabase({
-  supabaseUrl: 'https://likqvubiqoooqxrhvlsn.supabase.co',
-  supabaseKey: 'your-supabase-key'
+const api = new MaterialIndexAPI({
+  baseURL: 'https://api.material-index.com/v1',
+  apiKey: 'your-api-key'
 });
 
 // Query materials
-const materials = await db.materials.list({
+const materials = await api.materials.list({
   category: 'metals',
   limit: 20
 });
 
 // Search properties
-const properties = await db.properties.search({
+const properties = await api.properties.search({
   query: 'density',
   dataType: 'number'
 });
@@ -94,21 +93,21 @@ const properties = await db.properties.search({
 
 ### Python SDK
 ```python
-from material_index_database import MaterialIndexDatabase
+from material_index_api import MaterialIndexAPI
 
-db = MaterialIndexDatabase(
-    supabase_url='https://likqvubiqoooqxrhvlsn.supabase.co',
-    supabase_key='your-supabase-key'
+api = MaterialIndexAPI(
+    base_url='https://api.material-index.com/v1',
+    api_key='your-api-key'
 )
 
 # Query materials
-materials = db.materials.list(
+materials = api.materials.list(
     category='metals',
     limit=20
 )
 
 # Search properties
-properties = db.properties.search(
+properties = api.properties.search(
     query='density',
     data_type='number'
 )
@@ -192,57 +191,58 @@ npm run check-consistency
 - **Data Sources**: Verified from multiple scientific sources
 - **Update Frequency**: Weekly data updates
 
-## 🔐 Database Security
+## 🔐 API Security
 
-### Row Level Security (RLS)
-- **Public Access**: Read-only access to material data
-- **Authenticated Access**: Enhanced query capabilities
-- **Admin Access**: Full database management
+### Authentication
+- **API Key Authentication**: Secure access with API keys
+- **Rate Limiting**: Fair usage policies and limits
+- **HTTPS Only**: All communications encrypted
 
 ### Data Privacy
 - **No Personal Data**: No user information stored
 - **Public Domain**: All material data is publicly available
-- **Open Source**: Database schema and tools are open source
+- **Open Source**: API schema and tools are open source
 
 ## 📚 Documentation
 
-### Database Schema
-- **Tables**: Complete table definitions
-- **Relationships**: Foreign key relationships
-- **Indexes**: Performance optimization indexes
-- **Constraints**: Data validation rules
+### API Schema
+- **Endpoints**: Complete API endpoint definitions
+- **Data Models**: Material, category, and property schemas
+- **Authentication**: API key authentication
+- **Rate Limiting**: Query rate limits and policies
 
 ### API Documentation
-- **Endpoints**: Database query endpoints
-- **Authentication**: Supabase authentication
+- **Endpoints**: Material Index API endpoints
+- **Authentication**: API key authentication
 - **Rate Limiting**: Query rate limits
 - **Error Handling**: Error response formats
 
-## 🚀 Deployment
+## 🚀 API Gateway
 
-### Supabase Cloud
-- **Hosted Database**: Fully managed PostgreSQL
-- **Automatic Backups**: Daily automated backups
-- **Scaling**: Automatic scaling based on usage
-- **Monitoring**: Built-in performance monitoring
+### Material Index API
+- **RESTful API**: Complete REST API for material data
+- **Rate Limiting**: Built-in rate limiting and quotas
+- **Authentication**: API key-based authentication
+- **Documentation**: Complete API documentation
 
-### Self-Hosted
-- **PostgreSQL**: Standard PostgreSQL database
-- **Docker**: Containerized deployment
-- **Kubernetes**: Scalable orchestration
+### SDK Integration
+- **Multi-language**: TypeScript, Python, and more
+- **Easy Integration**: Simple SDK installation and usage
+- **Type Safety**: Full TypeScript support
+- **Examples**: Comprehensive usage examples
 
 ## 🤝 Contributing
 
 ### Data Contributions
-- **Material Data**: Submit new material entries
-- **Property Data**: Add new material properties
+- **Material Data**: Submit new material entries through API
+- **Property Data**: Add new material properties via API
 - **Category Data**: Suggest new material categories
 - **Data Validation**: Help verify existing data
 
 ### Code Contributions
 - **SDKs**: Improve language-specific SDKs
-- **Tools**: Enhance database management tools
-- **Documentation**: Improve data documentation
+- **API Client**: Enhance API client libraries
+- **Documentation**: Improve API documentation
 - **Testing**: Add comprehensive test coverage
 
 ## 📄 License
@@ -259,8 +259,8 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 ## 🔗 Links
 
 - **Website**: [material-index.com](https://material-index.com)
-- **Database**: [db.material-index.com](https://db.material-index.com)
-- **Supabase**: [supabase.com](https://supabase.com)
+- **API Gateway**: [api.material-index.com](https://api.material-index.com)
+- **Documentation**: [docs.material-index.com](https://docs.material-index.com)
 - **GitHub**: [github.com/material-index/material-index-api](https://github.com/material-index/material-index-api)
 
 ---
