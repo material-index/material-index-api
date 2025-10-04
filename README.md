@@ -245,7 +245,7 @@ npm run check-consistency
 - **Documentation**: Improve API documentation
 - **Testing**: Add comprehensive test coverage
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
