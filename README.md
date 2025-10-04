@@ -4,17 +4,17 @@
 [![Database Version](https://img.shields.io/badge/Database%20Version-1.0.0-blue.svg)](https://github.com/material-index/material-index-api)
 [![Supabase](https://img.shields.io/badge/Supabase-Enabled-green.svg)](https://supabase.com)
 
-## 🌟 Overview
+## Overview
 
 The **Material Index Database** is a comprehensive collection of material property data, designed to provide developers and researchers with access to structured material information for engineering, design, and research applications.
 
 This repository contains:
-- 📊 **Database Schema** - Complete database structure and relationships
-- 🛠️ **SDKs for Multiple Languages** - Easy integration with your applications
-- 📖 **Data Documentation** - Comprehensive material data specifications
-- 🔧 **Database Tools** - Utilities for data management and migration
+-  **Database Schema** - Complete database structure and relationships
+-  **SDKs for Multiple Languages** - Easy integration with your applications
+-  **Data Documentation** - Comprehensive material data specifications
+-  **Database Tools** - Utilities for data management and migration
 
-## 🚀 Quick Start
+## Quick Start
 
 ### API Gateway Access
 ```bash
@@ -38,7 +38,7 @@ npm install @material-index/database-client
 pip install material-index-database
 ```
 
-## 📊 Database Schema
+## Database Schema
 
 ### Core Tables
 
@@ -67,7 +67,7 @@ Materials ←→ Properties (Many-to-Many)
 Properties ←→ Property Categories (Many-to-One)
 ```
 
-## 🛠️ SDKs
+## SDKs
 
 ### TypeScript/JavaScript SDK
 ```typescript
@@ -113,7 +113,7 @@ properties = api.properties.search(
 )
 ```
 
-## 📊 Data Structure
+## Data Structure
 
 ### Material Data
 ```json
@@ -159,7 +159,7 @@ properties = api.properties.search(
 }
 ```
 
-## 🔧 Database Tools
+##  Database Tools
 
 ### Migration Scripts
 ```bash
@@ -182,7 +182,7 @@ npm run validate
 npm run check-consistency
 ```
 
-## 📈 Data Statistics
+## Data Statistics
 
 - **Materials**: 10,000+ material entries
 - **Categories**: 50+ material categories
@@ -191,7 +191,7 @@ npm run check-consistency
 - **Data Sources**: Verified from multiple scientific sources
 - **Update Frequency**: Weekly data updates
 
-## 🔐 API Security
+## API Security
 
 ### Authentication
 - **API Key Authentication**: Secure access with API keys
@@ -203,7 +203,7 @@ npm run check-consistency
 - **Public Domain**: All material data is publicly available
 - **Open Source**: API schema and tools are open source
 
-## 📚 Documentation
+## Documentation
 
 ### API Schema
 - **Endpoints**: Complete API endpoint definitions
@@ -217,7 +217,7 @@ npm run check-consistency
 - **Rate Limiting**: Query rate limits
 - **Error Handling**: Error response formats
 
-## 🚀 API Gateway
+## API Gateway
 
 ### Material Index API
 - **RESTful API**: Complete REST API for material data
@@ -231,7 +231,7 @@ npm run check-consistency
 - **Type Safety**: Full TypeScript support
 - **Examples**: Comprehensive usage examples
 
-## 🤝 Contributing
+## Contributing
 
 ### Data Contributions
 - **Material Data**: Submit new material entries through API
@@ -249,14 +249,14 @@ npm run check-consistency
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-## 🆘 Support
+## Support
 
 - **Documentation**: [docs.material-index.com](https://docs.material-index.com)
 - **Database Status**: [status.material-index.com](https://status.material-index.com)
 - **Community**: [GitHub Discussions](https://github.com/material-index/material-index-api/discussions)
 - **Email**: [info@material-index.com](mailto:info@material-index.com)
 
-## 🔗 Links
+## Links
 
 - **Website**: [material-index.com](https://material-index.com)
 - **API Gateway**: [api.material-index.com](https://api.material-index.com)
